@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css"
+  integrity="sha384-OLYO0LymqQ+uHXELyx93kblK5YIS3B2ZfLGBmsJaUyor7CpMTBsahDHByqSuWW+q" crossorigin="anonymous" />
+
+<link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet" />
+
+<fieldset class="cc-fieldset">
+  <legend class="cc-fieldset-legend" [class.toggleable]="toggleable === true" (click)="toggleFieldset()">
+    {{ header }}
+    <i class="fas fa-chevron-right" [class.cc-d-none]="toggleable === false || collapsed === false"></i>
+    <i class="fas fa-chevron-down" [class.cc-d-none]="toggleable === false || collapsed === true"></i>
+  </legend>
+  
+  <div class="cc-fieldset-content" [style.maxHeight.px]="maxHeight" [@slideInOut]="visibilityState">
+    <ng-content></ng-content>
+  </div>
+</fieldset>
+

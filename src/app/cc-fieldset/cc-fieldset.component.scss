@@ -1,0 +1,42 @@
+* {
+  font-family: quicksand, open sans, roboto, open sans, nunito, sans-serif;
+}
+
+$border-radius: 6px;
+$border-color: #dee2e6;
+$background: transparent;
+
+.cc-fieldset {
+  border: 1px solid $border-color;
+  background: $background;
+  border-radius: $border-radius;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+
+  > .cc-fieldset-content {
+    margin: 0 -0.75em; // Not necessary! Only for better positioning of the scrollbar...
+    padding: 0 0.75em; // Not necessary if you remove the top line!
+  }
+}
+
+.cc-fieldset-legend {
+  padding: 0.25rem 0.5rem;
+  font-weight: 700;
+  border: 1px solid transparent;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+
+  &.toggleable {
+    cursor: pointer;
+
+    &:hover {
+      border-color: $border-color;
+      border-radius: $border-radius;
+    }
+  }
+}
+
+.cc-d-none {
+  display: none;
+}
